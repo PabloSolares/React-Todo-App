@@ -1,13 +1,406 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    font-family: "Nunito Sans", sans-serif;
 }
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    color: white;
+    background: #181824;
+}
+
+
+.container-auth {
+    max-width: 445px;
+    height: 310px;
+    margin: 0 auto;
+    margin-top: 10rem;
+    text-align: center;
+}
+
+.register{
+    height: 580px;
+    margin-top: 5rem;
+}
+
+.container-auth span {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.container-auth h1 {
+    font-weight: lighter;
+    margin-bottom: 10px;
+}
+
+.form-box {
+
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background: #25273C;
+    width: 100%;
+    height: 90%;
+    padding: 1rem;
+    margin-top: 1.6rem;
+    padding-top: 1.5rem;
+    transition: 300ms;
+
+    box-shadow: 1px 2px 5px 1px #2222228a;
+}
+
+.form-auth label {
+    font-size: 19px;
+    margin-left: 0.5rem;
+
+}
+
+.form-auth input {
+    width: 95%;
+    height: 45px;
+    border-radius: 5px;
+    background: #F0F0F0;
+    font-size: 17px;
+    padding: 1rem;
+    margin: 0.6rem;
+    border: none;
+    box-shadow: inset 1px 2px 5px 1px #b9b8b8;
+    transition: 300ms;
+    outline: none;
+
+}
+
+.submit-button {
+    width: 95%;
+    height: 45px;
+    cursor: pointer;
+    border: none;
+    margin: 0.6rem;
+    background-color: #004C91;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    box-shadow: 1px 2px 5px 1px #022f5875;
+    transition: 300ms;
+}
+
+.submit-button:hover{
+    box-shadow: inset 5px 5px 5px 5px #01254752;
+
+}
+
+.register-link {
+    max-width: 445px;
+    height: 80px;
+    background: #25273C;
+    border: 5px;
+    margin: 0 auto;
+    margin-top: 5rem;
+    padding: 1rem;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: 1px 2px 5px 1px #2222228a;
+
+}
+
+.link-auth {
+    color: #004C91;
+}
+/* TODOS */
+
+#todos .banner {
+    width: 100%;
+    
+}
+
+#todos .todo-container {
+    max-width: 500px;
+    height: auto;
+    margin: 0px auto;
+    margin-top: -3rem;
+}
+
+.nav {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+    align-content: space-between;
+}
+
+.nav ul button {
+    cursor: pointer;
+    width: 80px;
+    height: 30px;
+    background: rgba(255, 29, 29, 0.979);
+    border: none;
+    border-radius: 5px;
+    font-family: 'Josefin Sans', sans-serif;
+    box-shadow: 1px 2px 5px 1px rgba(241, 39, 39, 0.699);
+    font-size: 17px;
+    text-align: center;
+    color: white;
+    margin-left: 2rem;
+    transition: 300ms;
+    margin-right: 1rem;
+}
+
+.nav ul button:hover {
+    box-shadow: 1px 2px 5px 1px rgba(170, 3, 3, 0.699);
+}
+
+
+
+#todos .todo-container .nav ul span {
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+}
+
+#todos .todo-container .nav h1 {
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: left;
+    font-weight: 700;
+    flex-basis: auto;
+    margin-right: auto;
+    margin-left: 3rem;
+
+}
+
+#todos .todo-container .write-todo {
+    position: relative;
+    width: 70%;
+    height: 50px;
+    background: #25273C;
+    margin: 0px auto;
+    border-radius: 5px;
+    line-height: 50px;
+    box-shadow: 1px 2px 5px 1px #2222228a;
+
+}
+
+#todos .todo-container .write-todo input {
+    width: 100%;
+    border: none;
+    background: #25273C;
+    box-shadow: none;
+    font-size: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0px auto;
+    padding: 1rem;
+    color: white;
+    outline: none;
+}
+
+#todos .todo-container .all-todo {
+    position: relative;
+    width: 85%;
+    margin: 0px auto;
+    height: auto;
+    background: #25273C;
+    border-radius: 5px;
+    box-shadow: 1px 2px 5px 1px #2222228a;
+    margin-top: 3rem;
+}
+
+#todos .todo-container .all-todo .todo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0px auto;
+    padding: 1rem;
+    text-align: center;
+    line-height: 30px;
+    /* padding-left: 5rem; */
+    border-bottom: 1px solid hsla(235, 32%, 92%, 0.432);
+}
+
+#todos .todo-container .all-todo .todo:last-child{
+    border-bottom: none;
+
+}
+
+#todos .todo-container .all-todo .todo input {
+    width: 150px;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    outline: none;
+    background: #25273C;
+    color: white;
+    box-shadow: none;
+    border: none;
+    transition: 300ms;
+}
+
+
+#todos .todo-container .all-todo .todo .cross {
+    width: 20px;
+    height: 20px;
+    margin-left: 4rem;
+    cursor: pointer;
+}
+#todos .todo-container .all-todo .todo .cross:hover {
+    color: rgba(255, 29, 29, 0.979);
+}
+#todos .todo-container .all-todo .todo .circle {
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    border: 1px solid hsla(235, 32%, 92%, 0.432);
+    cursor: pointer;
+    margin-right: auto;
+    flex-basis: auto;
+    transition: 300ms;
+}
+
+.back {
+    background: hsl(192, 100%, 67%); 
+}
+
+.line {
+    text-decoration: line-through;
+}
+
+/* #todos .todo-container .all-todo .todo .circle:active {
+    background: hsl(192, 100%, 67%) ;
+} */
+
+/* #todos .todo-container .all-todo .todo .circle img {
+    line
+} */
+
+
+
+.sk-chase {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    margin: 0px auto;
+    margin-top: 15rem;
+    animation: sk-chase 2.5s infinite linear both;
+  }
+  
+  .sk-chase-dot {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0; 
+    animation: sk-chase-dot 2.0s infinite ease-in-out both; 
+  }
+  
+  .sk-chase-dot:before {
+    content: '';
+    display: block;
+    width: 25%;
+    height: 25%;
+    background-color: hsl(192, 100%, 67%) ;
+    border-radius: 100%;
+    animation: sk-chase-dot-before 2.0s infinite ease-in-out both; 
+  }
+
+  
+  .sk-chase-dot:nth-child(1) { animation-delay: -1.1s; }
+  .sk-chase-dot:nth-child(2) { animation-delay: -1.0s; }
+  .sk-chase-dot:nth-child(3) { animation-delay: -0.9s; }
+  .sk-chase-dot:nth-child(4) { animation-delay: -0.8s; }
+  .sk-chase-dot:nth-child(5) { animation-delay: -0.7s; }
+  .sk-chase-dot:nth-child(6) { animation-delay: -0.6s; }
+  .sk-chase-dot:nth-child(1):before { animation-delay: -1.1s; }
+  .sk-chase-dot:nth-child(2):before { animation-delay: -1.0s; }
+  .sk-chase-dot:nth-child(3):before { animation-delay: -0.9s; }
+  .sk-chase-dot:nth-child(4):before { animation-delay: -0.8s; }
+  .sk-chase-dot:nth-child(5):before { animation-delay: -0.7s; }
+  .sk-chase-dot:nth-child(6):before { animation-delay: -0.6s; }
+  
+  @keyframes sk-chase {
+    100% { transform: rotate(360deg); } 
+  }
+  
+  @keyframes sk-chase-dot {
+    80%, 100% { transform: rotate(360deg); } 
+  }
+  
+  @keyframes sk-chase-dot-before {
+    50% {
+      transform: scale(0.4); 
+    } 100%, 0% {
+      transform: scale(1.0); 
+    } 
+  }
+
+
+@media (min-width: 900px){
+    #todos .todo-container {
+        max-width: 550px;
+        margin: 0px auto;
+        margin-top: -12rem;
+    }
+
+    #todos .todo-container .write-todo {
+        width: 100%;
+    
+    }
+    
+    #todos .todo-container .write-todo input {
+        width: 100%;
+        
+    }
+ }
+
+ @media(min-width: 500px) {
+    #todos .todo-container .all-todo {
+        width: 100%;
+        margin-top: 3rem;
+    }
+    #todos .todo-container .all-todo .todo {
+        width: 90%;
+    }
+    
+   
+    #todos .todo-container .all-todo .todo input {
+        width: 250px;
+    }
+
+    #todos .todo-container .nav h1 {
+        font-size: 40px;
+        letter-spacing: 15px;
+        margin-left: 0;
+    }
+
+    
+ }
+
+ @media(max-width: 500px) {
+    .container-auth {
+        max-width: 345px;
+    }
+
+    .register-link {
+        max-width: 345px;
+        
+    
+    }
+ }
